@@ -37,11 +37,22 @@ public class ItemPhase : MonoBehaviour
 
     public void SpawnOnMap()
     {
-        levelUpManager.buttonsClicked++;
+        levelUpManager.buttonsClicked++; //tell system we've clicked a button
         levelUpManager.LevelUpAll(); //level up all objects on the map
         this.gameObject.SetActive(true); //bring this item onto the map
-     
+
+        //check if all buttons are clicked
+        if(levelUpManager.buttonsClicked == 6)
+        {
+            StartCoroutine(CalculateResult(1));
+        }
+        
     }
 
-
+    public IEnumerator CalculateResult(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        levelUpManager.CheckForMaxed(); //system counts how many are maxed out
+        levelUpManager.ShowResult(); //System Shows result
+    }
 }

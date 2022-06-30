@@ -11,7 +11,7 @@ public class LevelUpManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(items.Length);
+
     }
 
     // Update is called once per frame
@@ -30,10 +30,27 @@ public class LevelUpManager : MonoBehaviour
                 //if the object has been set to active
                 if (item.gameObject.activeInHierarchy)
                 {
-                    // Debug.Log(item.gameObject.name);
                     item.LevelUp();
                 }
             }
         } 
+    }
+
+    public void ShowResult()
+    {
+        Debug.Log("You got " + itemsMaxed + "/6!");
+    }
+
+    public void CheckForMaxed()
+    {
+        itemsMaxed = 0; //system starts at 0 when checking
+
+        foreach(ItemPhase item in items)
+        {
+            if(item.currentLevel == item.maxLevel) //for every item, check if their current level is their max level
+            {
+                itemsMaxed++;
+            }
+        }
     }
 }
