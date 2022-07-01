@@ -5,10 +5,13 @@ using UnityEngine.EventSystems;
 
 public class ItemPhase : MonoBehaviour
 {
+    //Levelling
+    
     public int maxLevel;
     public int currentLevel = 1;
-
     public LevelUpManager levelUpManager;
+
+    //modelling
     ModelSwap modelSwap;
     GameObject model;
     PositionAnchor positionAnchor;
@@ -16,7 +19,7 @@ public class ItemPhase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        modelSwap = GetComponent<ModelSwap>(); 
+        modelSwap = GetComponent<ModelSwap>(); //grab the model swap component on this item
     }
 
     // Update is called once per frame
@@ -25,7 +28,7 @@ public class ItemPhase : MonoBehaviour
 
     }
 
-    public void LevelUp()
+    public void LevelUp() //level up the item
     {
         //check the item hasnt reached max level yet
         if(currentLevel < maxLevel)
@@ -35,7 +38,8 @@ public class ItemPhase : MonoBehaviour
         }
     }
 
-    public IEnumerator InstantiateModel(float seconds)
+    
+    public IEnumerator InstantiateModel(float seconds) //changes the prefab everytime it levels up and spawns it originally
     {
         yield return new WaitForSeconds(seconds);
 
@@ -49,7 +53,7 @@ public class ItemPhase : MonoBehaviour
         }
     }
 
-    public void SpawnOnMap()
+    public void SpawnOnMap() //spawn the item on the map
     {
         levelUpManager.buttonsClicked++; //tell system we've clicked a button
         levelUpManager.LevelUpAll(); //level up all objects on the map
@@ -63,7 +67,7 @@ public class ItemPhase : MonoBehaviour
         } 
     }
 
-    public IEnumerator CalculateResult(float seconds)
+    public IEnumerator CalculateResult(float seconds) //calculate final result *is often wrong*
     {
         yield return new WaitForSeconds(seconds);
         levelUpManager.CheckForMaxed(); //system counts how many are maxed out
