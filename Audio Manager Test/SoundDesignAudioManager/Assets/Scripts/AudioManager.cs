@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     AudioSource audioController;
 
     //each of the arrays (these are not directly used but helped me keep track of which clip was where since we don't have all the required clips yet
-    //feel free to delete
+    //feel free to delete okay
     public AudioClip[] audioCat;
     public AudioClip[] audioBall;
     public AudioClip[] audioBell;
@@ -21,7 +21,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] audioFish;
     public AudioClip[] audioLaser;
     public AudioClip[] audioBox;
-
+    
     //the thing that is actually used, an array of audio clip arrays
     public AudioClipArray[] arrayOfArrays;
 
@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviour
     {
         //basic enough
         audioController = GetComponent<AudioSource>();
-
+        
     }
 
     // Update is called once per frame
