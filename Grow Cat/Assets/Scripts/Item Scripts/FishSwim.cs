@@ -18,7 +18,7 @@ public class FishSwim : MonoBehaviour
     public float speedBonus;
 
     private Transform transferLocation;
-    private float distance;
+    public float distance;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +32,8 @@ public class FishSwim : MonoBehaviour
         //adds to the distance variable over time, rate influenced by speedBonus
         distance = ((distance + Time.deltaTime) + speedBonus/1000) % 1f;
 
-        //once we get above 0.8 (pretty much end of the path)
-        if (distance > 0.8)
+        //once we get above 0.95 (pretty much end of the path)
+        if (distance > 0.95)
         {
             //reset distance value
             distance = 0;
