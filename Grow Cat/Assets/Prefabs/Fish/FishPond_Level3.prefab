@@ -2566,7 +2566,6 @@ GameObject:
   - component: {fileID: 1392043775102003464}
   - component: {fileID: 8029669237443583874}
   - component: {fileID: 5003036449632867457}
-  - component: {fileID: 7417657845007500024}
   m_Layer: 0
   m_Name: FIishPond_Rim_Top
   m_TagString: Untagged
@@ -3405,19 +3404,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &7417657845007500024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5940880590471788952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a75ff2e41e13f7449e31f995b4941b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemBlock: {fileID: 0}
 --- !u!1 &6273682977872550517
 GameObject:
   m_ObjectHideFlags: 0
@@ -4282,9 +4268,10 @@ GameObject:
   - component: {fileID: 8886973056051343911}
   - component: {fileID: 3299653756168430773}
   - component: {fileID: 5525266363511747599}
+  - component: {fileID: 2585736371273905577}
   m_Layer: 0
   m_Name: FishPond_Level3
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4298,7 +4285,7 @@ Transform:
   m_GameObject: {fileID: 7110845686710718764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17, y: 5, z: -15}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.50944775, y: 0.50944775, z: 0.50944775}
   m_Children:
   - {fileID: 5578376433007469998}
   - {fileID: 7849241138541661721}
@@ -4587,3 +4574,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &2585736371273905577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7110845686710718764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a75ff2e41e13f7449e31f995b4941b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemBlock: {fileID: 0}
