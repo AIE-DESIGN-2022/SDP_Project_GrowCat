@@ -6,20 +6,24 @@ using UnityEngine.EventSystems;
 public class ItemPhase : MonoBehaviour
 {
     //Levelling
-    
     public int maxLevel;
     public int currentLevel = 1;
     public LevelUpManager levelUpManager;
 
     //modelling
-    ModelSwap modelSwap;
-    GameObject model;
-    PositionAnchor positionAnchor;
+    ModelSwap modelSwap; //our script for swapping models
+    GameObject model; //is used to represent the current prefab model
+    PositionAnchor positionAnchor; //controls the location of the prefab models
+
+    //Sound
+    AudioManager audioManager;
+    public int soundCategory; // tell the system what category of sounds to play for this item
 
     // Start is called before the first frame update
     void Start()
     {
         modelSwap = GetComponent<ModelSwap>(); //grab the model swap component on this item
+        audioManager = FindObjectOfType<AudioManager>(); //grab the audio manager
     }
 
     // Update is called once per frame
@@ -33,11 +37,11 @@ public class ItemPhase : MonoBehaviour
         //check the item hasnt reached max level yet
         if(currentLevel < maxLevel)
         {
-            currentLevel++;
-            StartCoroutine(InstantiateModel(0.5f));
+            currentLevel++; //increase items level
+            PlaySoundEffect(5); //play a level up sound
+            StartCoroutine(InstantiateModel(0.5f)); //change the prefab with level ups
         }
     }
-
     
     public IEnumerator InstantiateModel(float seconds) //changes the prefab everytime it levels up and spawns it originally
     {
@@ -48,10 +52,17 @@ public class ItemPhase : MonoBehaviour
         {
             Destroy(model); //clear previous model
             model = Instantiate(modelSwap.models[currentLevel].gameObject); //create this objects model at it's current level
-            positionAnchor = model.GetComponentInParent<PositionAnchor>(); //grab the model's anchor script
-            positionAnchor.itemBlock = this.gameObject.transform; //assign the item's location as the models location
+            AnchorPosition(model, this.gameObject); //the models transform is equal to this items
+            PlaySoundEffect(soundCategory); //play one of this item's sound effects
             ShowPop();
         }
+    }
+
+    
+    void AnchorPosition(GameObject spawn, GameObject parent) //stick one object to anothers position permanently
+    {
+        positionAnchor = spawn.GetComponentInParent<PositionAnchor>(); //grab the model's anchor script
+        positionAnchor.itemBlock = parent.gameObject.transform; //assign the item's location as the models location
     }
 
     public void ShowPop() //Show a cloud animation over the transformation
@@ -59,10 +70,7 @@ public class ItemPhase : MonoBehaviour
         int randomPop = Random.Range(0, levelUpManager.pops.Length); //pick a random pop
 
         GameObject pop = Instantiate(levelUpManager.pops[randomPop].gameObject); //create the pop
-        positionAnchor = pop.GetComponentInParent<PositionAnchor>(); //grap the pop's anchor script
-        positionAnchor.itemBlock = model.gameObject.transform; //assing the items location as the pops location
-
-        
+        AnchorPosition(pop, model); //the pop appears in the same position as the model
     }
 
     public void SpawnOnMap() //spawn the item on the map
@@ -77,6 +85,11 @@ public class ItemPhase : MonoBehaviour
         {
             StartCoroutine(CalculateResult(1));
         } 
+    }
+
+    void PlaySoundEffect(int sound)
+    {
+        audioManager.PlaySound(sound); //play selected sound
     }
 
     public IEnumerator CalculateResult(float seconds) //calculate final result *is often wrong*
