@@ -15,6 +15,6 @@ public class PositionAnchor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = itemBlock.position; //anchor this item to selected object
+            this.transform.position = itemBlock.position; //anchor this item to selected object      
     }
 }

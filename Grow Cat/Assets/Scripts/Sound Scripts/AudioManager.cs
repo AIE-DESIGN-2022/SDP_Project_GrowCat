@@ -14,7 +14,7 @@ using UnityEngine;
 // 4. Pillow Sounds                 > "item_pillow_[]"
 // 5. LevelUp Sounds                > "item_levelup_1", "item_pop_1"
 // 6. UI Sounds                     > "UI_Click_[]"
-// 7. Box Sounds                    >
+// 7. Box Sounds                    > "Item_Box_Drop"
 // 8. Ball Sounds                   >
 
 
@@ -57,6 +57,7 @@ public class AudioManager : MonoBehaviour
     public void PlaySound(int itemID)
     {
         soundID = Random.Range(0, soundLibrary[itemID].itemCategory.Length - 1); //pick a random sound in the category
+        Debug.Log("SoundID = " + soundID);
         audioSource.PlayOneShot(soundLibrary[itemID].itemCategory[soundID]); //play that sound
     }
 

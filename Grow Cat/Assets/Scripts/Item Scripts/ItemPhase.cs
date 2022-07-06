@@ -54,7 +54,7 @@ public class ItemPhase : MonoBehaviour
             model = Instantiate(modelSwap.models[currentLevel].gameObject); //create this objects model at it's current level
             AnchorPosition(model, this.gameObject); //the models transform is equal to this items
             PlaySoundEffect(soundCategory); //play one of this item's sound effects
-            ShowPop();
+            ShowPop(model);
         }
     }
 
@@ -65,12 +65,12 @@ public class ItemPhase : MonoBehaviour
         positionAnchor.itemBlock = parent.gameObject.transform; //assign the item's location as the models location
     }
 
-    public void ShowPop() //Show a cloud animation over the transformation
+    public void ShowPop(GameObject position) //Show a cloud animation over the transformation
     {
         int randomPop = Random.Range(0, levelUpManager.pops.Length); //pick a random pop
 
         GameObject pop = Instantiate(levelUpManager.pops[randomPop].gameObject); //create the pop
-        AnchorPosition(pop, model); //the pop appears in the same position as the model
+        AnchorPosition(pop, position); //the pop appears in the same position as the model
     }
 
     public void SpawnOnMap() //spawn the item on the map
