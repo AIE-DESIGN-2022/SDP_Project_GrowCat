@@ -2566,9 +2566,10 @@ GameObject:
   - component: {fileID: 6413365775477365658}
   - component: {fileID: 1125545049558502664}
   - component: {fileID: 7996621223349558706}
+  - component: {fileID: 7684327560082214475}
   m_Layer: 0
   m_Name: FishPond_Level5
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2582,7 +2583,7 @@ Transform:
   m_GameObject: {fileID: 4682275367469414545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.75, y: 5.25, z: -15}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.50944775, y: 0.50944775, z: 0.50944775}
   m_Children:
   - {fileID: 8015944540223671315}
   - {fileID: 5672881743677958052}
@@ -2874,6 +2875,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &7684327560082214475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4682275367469414545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a75ff2e41e13f7449e31f995b4941b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemBlock: {fileID: 0}
 --- !u!1 &8081212219125452837
 GameObject:
   m_ObjectHideFlags: 0
@@ -2887,7 +2901,6 @@ GameObject:
   - component: {fileID: 3532384142856421557}
   - component: {fileID: 5565069773540521535}
   - component: {fileID: 7438363276685311292}
-  - component: {fileID: 4946311781533248325}
   m_Layer: 0
   m_Name: FIishPond_Rim_Top
   m_TagString: Untagged
@@ -3726,19 +3739,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &4946311781533248325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8081212219125452837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a75ff2e41e13f7449e31f995b4941b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemBlock: {fileID: 0}
 --- !u!1 &8450052199053243336
 GameObject:
   m_ObjectHideFlags: 0
