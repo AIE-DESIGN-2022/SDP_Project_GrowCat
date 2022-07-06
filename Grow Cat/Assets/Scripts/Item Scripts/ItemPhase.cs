@@ -26,12 +26,6 @@ public class ItemPhase : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>(); //grab the audio manager
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void LevelUp() //level up the item
     {
         //check the item hasnt reached max level yet
