@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5217fd6a6513a6e4790e3efbe4629342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadState: {fileID: 0}
+  deadState: {fileID: 8601146425108551046, guid: d2280f29efcca5b45bda9a49bf30ded3, type: 3}
 --- !u!64 &-3561807972746254768
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class LaserFollow : MonoBehaviour
 {
+    //Movement
+    [Header("Movement")]
     public float speed;
     public float walk;
+
+    //Objects
+    [Header("Objects")]
     public GameObject laser;
+
+    //System
     Animator catAnimator;
     AudioManager audioManager;
 
@@ -14,12 +21,12 @@ public class LaserFollow : MonoBehaviour
     void Start()
     {
         catAnimator = FindObjectOfType<Animator>(); //select animator
-        audioManager = FindObjectOfType<AudioManager>();
+        audioManager = FindObjectOfType<AudioManager>(); //select audiomanager
 
-        StartCoroutine(CatSounds());
+        StartCoroutine(CatSounds()); //the cat will make it's own cat sounds
         IEnumerator CatSounds()
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(15);
             audioManager.PlaySound(2);
             StartCoroutine(CatSounds());
         }
@@ -35,9 +42,7 @@ public class LaserFollow : MonoBehaviour
         if (laser != null)
         {
             walk = speed * Time.deltaTime; //walk speed
-
             transform.position = Vector3.MoveTowards(transform.position, laser.transform.position, speed); //move towards the laser
-
             catAnimator.SetTrigger("Walk"); //animator switches to walking animation
         }
         else

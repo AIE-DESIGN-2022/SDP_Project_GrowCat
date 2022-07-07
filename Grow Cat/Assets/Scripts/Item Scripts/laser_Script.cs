@@ -20,8 +20,10 @@ public class laser_Script : MonoBehaviour
         if (catTower == null) //if cat tower isnt high enough
         { //kill the laser
             Rigidbody rb = laserBase.GetComponent<Rigidbody>();
-            rb.useGravity = true;
-            Destroy(gameObject);
+            rb.useGravity = true; //make the base fall
+            LevelUpManager levelUpManager = FindObjectOfType<LevelUpManager>();
+            levelUpManager.itemsMaxed--;
+            Destroy(gameObject); //destroy the dot
         }
 
     }

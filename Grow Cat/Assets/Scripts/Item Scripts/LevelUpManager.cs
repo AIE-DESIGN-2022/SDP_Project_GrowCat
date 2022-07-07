@@ -31,13 +31,18 @@ public class LevelUpManager : MonoBehaviour
 
     public void CheckForMaxed()
     {
-        itemsMaxed = 0; //system starts at 0 when checking
+        //itemsMaxed = 0; //system starts at 0 when checking
 
         foreach(ItemPhase item in items)
         {
             if(item.currentLevel == item.maxLevel) //for every item, check if their current level is their max level
             {
-                itemsMaxed++;
+                itemsMaxed++;  
+            }
+
+            if (itemsMaxed != 0)
+            {
+                Debug.Log(item.name);
             }
         }
     }
