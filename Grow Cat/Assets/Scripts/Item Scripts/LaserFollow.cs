@@ -8,11 +8,21 @@ public class LaserFollow : MonoBehaviour
     public float walk;
     public GameObject laser;
     Animator catAnimator;
+    AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
     {
         catAnimator = FindObjectOfType<Animator>(); //select animator
+        audioManager = FindObjectOfType<AudioManager>();
+
+        StartCoroutine(CatSounds());
+        IEnumerator CatSounds()
+        {
+            yield return new WaitForSeconds(5);
+            audioManager.PlaySound(2);
+            StartCoroutine(CatSounds());
+        }
     }
 
     void FixedUpdate()
