@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7546329732573589116}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.73, y: 0.199, z: -0.56}
+  m_LocalPosition: {x: 0.05, y: 0.683, z: 0.48}
   m_LocalScale: {x: 0.13380353, y: 0.13380353, z: 0.13380353}
   m_Children: []
   m_Father: {fileID: 7546329732667612978}
@@ -120,9 +120,10 @@ GameObject:
   - component: {fileID: 7546329732667612979}
   - component: {fileID: 7546329732667612980}
   - component: {fileID: 7546329732667612981}
+  - component: {fileID: 3682452161759011199}
   m_Layer: 0
   m_Name: Cat
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7546329732667612982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.73, y: 0.99367225, z: 0.56}
+  m_LocalPosition: {x: 0.73, y: 0, z: 0.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7546329732573589115}
@@ -204,3 +205,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3682452161759011199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546329732667612982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efeab655a16f4a41a3003252d9a71b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.003
+  walk: 0
+  laser: {fileID: 0}
