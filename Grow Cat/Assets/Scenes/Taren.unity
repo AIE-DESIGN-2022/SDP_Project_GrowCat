@@ -1996,7 +1996,6 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 6d269627b46022b4d886d452527494bb, type: 3}
   - itemCategory:
     - {fileID: 8300000, guid: 34c8c2f5d36dc3743bdafad3b70cf4ae, type: 3}
-    - {fileID: 8300000, guid: b9b2efa19a5fe744a9dab3e7c2fd0d89, type: 3}
   - itemCategory:
     - {fileID: 8300000, guid: d4d1b6ceaba67684ca57f1713a1b885f, type: 3}
     - {fileID: 8300000, guid: 695568738d4671f43b31429392b9be23, type: 3}
