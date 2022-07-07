@@ -15,8 +15,7 @@ public class LaserFollow : MonoBehaviour
         catAnimator = FindObjectOfType<Animator>(); //select animator
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //ensure the cat stays on the same Y level instead of sinking into ground
         Vector3 position = new Vector3 (transform.position.x, 1.05f, transform.position.z);
