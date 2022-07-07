@@ -39,11 +39,6 @@ public class LevelUpManager : MonoBehaviour
             {
                 itemsMaxed++;  
             }
-
-            if (itemsMaxed != 0)
-            {
-                Debug.Log(item.name);
-            }
         }
     }
 }

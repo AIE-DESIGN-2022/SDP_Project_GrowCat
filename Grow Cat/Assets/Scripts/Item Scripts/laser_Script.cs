@@ -18,11 +18,14 @@ public class laser_Script : MonoBehaviour
         laserBase = GameObject.Find("Laser(Clone)"); //assign the laser as variable
 
         if (catTower == null) //if cat tower isnt high enough
-        { //kill the laser
+        { 
+            //kill the laser
             Rigidbody rb = laserBase.GetComponent<Rigidbody>();
             rb.useGravity = true; //make the base fall
-            LevelUpManager levelUpManager = FindObjectOfType<LevelUpManager>();
-            levelUpManager.itemsMaxed--;
+
+            ItemPhase itemSpawn = laserSpawn.GetComponent<ItemPhase>(); //laser will not count as maxed
+            itemSpawn.currentLevel++;
+
             Destroy(gameObject); //destroy the dot
         }
 
