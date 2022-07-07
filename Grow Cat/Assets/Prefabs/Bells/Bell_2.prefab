@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1348837565741542672}
   m_Layer: 0
   m_Name: Bell_2
-  m_TagString: Untagged
+  m_TagString: Bell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5217fd6a6513a6e4790e3efbe4629342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadState: {fileID: 0}
 --- !u!64 &-3561807972746254768
 MeshCollider:
   m_ObjectHideFlags: 0
