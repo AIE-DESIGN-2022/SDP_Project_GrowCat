@@ -32,7 +32,15 @@ public class ItemPhase : MonoBehaviour
         if(currentLevel < maxLevel)
         {
             currentLevel++; //increase items level
-            PlaySoundEffect(5); //play a level up sound
+
+            //Make sure the level up sound isn't stacking here.
+            GameObject audioManager = GameObject.Find("AudioManager");
+            AudioSource audioSource = audioManager.GetComponent<AudioSource>();
+            if(!audioSource.isPlaying)
+            {
+                PlaySoundEffect(5); //play a level up sound
+            }
+
             StartCoroutine(InstantiateModel(0.5f)); //change the prefab with level ups
         }
     }
