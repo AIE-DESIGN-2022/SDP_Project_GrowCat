@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Taren.unity
+    guid: ec1fd16c3bd953e4783a5311d21078a2
   m_configObjects: {}
