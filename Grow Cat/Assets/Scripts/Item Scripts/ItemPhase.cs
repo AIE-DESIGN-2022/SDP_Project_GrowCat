@@ -56,7 +56,11 @@ public class ItemPhase : MonoBehaviour
     void AnchorPosition(GameObject spawn, GameObject parent) //stick one object to anothers position permanently
     {
         positionAnchor = spawn.GetComponentInParent<PositionAnchor>(); //grab the model's anchor script
-        positionAnchor.itemBlock = parent.gameObject.transform; //assign the item's location as the models location
+        if(positionAnchor != null)
+        {
+            positionAnchor.itemBlock = parent.gameObject.transform; //assign the item's location as the models location
+        }
+        
     }
 
     public void ShowPop(GameObject position) //Show a cloud animation over the transformation
