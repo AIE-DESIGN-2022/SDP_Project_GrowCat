@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class LaserMove : MonoBehaviour
 {
+    //Movement
+    [Header("Movement")]
     public float speed;
     public float moveSpeed;
-    private GameObject cat;
-
     public Transform point;
     public float x;
     public float z;
+
+    private GameObject cat;
+
+    
 
     // Start is called before the first frame update
     void Start()
