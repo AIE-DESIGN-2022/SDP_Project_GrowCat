@@ -8,6 +8,8 @@ TagManager:
   - BallSpawn
   - Fish
   - FishSpawn
+  - Laser
+  - Cat
   layers:
   - Default
   - TransparentFX
