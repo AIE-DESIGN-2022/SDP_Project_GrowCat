@@ -10,6 +10,9 @@ TagManager:
   - FishSpawn
   - Laser
   - Cat
+  - Pillow
+  - CatTower
+  - Bell
   layers:
   - Default
   - TransparentFX

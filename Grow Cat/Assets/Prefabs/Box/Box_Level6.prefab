@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3582333292423741153}
   m_Layer: 0
   m_Name: Box_Tower_Left_Upper
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -815,7 +815,7 @@ GameObject:
   - component: {fileID: 8055107508195901658}
   m_Layer: 0
   m_Name: Box_Level6
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1144,7 +1144,7 @@ GameObject:
   - component: {fileID: 2796913839667703851}
   m_Layer: 0
   m_Name: Box_Top_Center
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1941,7 +1941,7 @@ GameObject:
   - component: {fileID: 2796913840187037842}
   m_Layer: 0
   m_Name: Box_Top_Center_Ring
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3512,7 +3512,7 @@ GameObject:
   - component: {fileID: 2796913840407481575}
   m_Layer: 0
   m_Name: Box_Tower_Right_A
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4309,7 +4309,7 @@ GameObject:
   - component: {fileID: 2796913840653160262}
   m_Layer: 0
   m_Name: Box_Tower_Right_B
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5106,7 +5106,7 @@ GameObject:
   - component: {fileID: 2796913840722071585}
   m_Layer: 0
   m_Name: Box_Tower_Center
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5905,7 +5905,7 @@ GameObject:
   - component: {fileID: 3925995689340554331}
   m_Layer: 0
   m_Name: Box_Tower_Right_B
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6702,7 +6702,7 @@ GameObject:
   - component: {fileID: 301036636267994502}
   m_Layer: 0
   m_Name: Box_Top_Left_Ring
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8273,7 +8273,7 @@ GameObject:
   - component: {fileID: 4875382800503764011}
   m_Layer: 0
   m_Name: Box_Tower_Left_Cave
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8586,7 +8586,7 @@ GameObject:
   - component: {fileID: 8521312080811674831}
   m_Layer: 0
   m_Name: Box_Tower_Left
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9381,7 +9381,7 @@ GameObject:
   - component: {fileID: 2880341968264945897}
   m_Layer: 0
   m_Name: Box_Tower_Right
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9420,7 +9420,7 @@ GameObject:
   - component: {fileID: 1517291879580370331}
   m_Layer: 0
   m_Name: Box_Top_Left
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10217,7 +10217,7 @@ GameObject:
   - component: {fileID: 3590076628640374011}
   m_Layer: 0
   m_Name: Box_Top_Right_Ring
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11788,7 +11788,7 @@ GameObject:
   - component: {fileID: 6402768930226794385}
   m_Layer: 0
   m_Name: Box_Top_Right
-  m_TagString: Untagged
+  m_TagString: CatTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
