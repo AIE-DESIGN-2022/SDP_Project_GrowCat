@@ -13,6 +13,7 @@ TagManager:
   - Pillow
   - CatTower
   - Bell
+  - Ball
   layers:
   - Default
   - TransparentFX
