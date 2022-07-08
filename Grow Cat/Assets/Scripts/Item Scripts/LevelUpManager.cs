@@ -37,10 +37,15 @@ public class LevelUpManager : MonoBehaviour
         {
             if (item.gameObject.name == "Object_Fish") //check fish has been raised
             {
-                 if (!ballScript.BallHitFish)
-                    {
+                 if (!ballScript.BallHitFish) //if the fish was not raised, it cannot be maxed
+                 {
                         item.currentLevel--;
-                    }
+                 }
+
+                 if(item.currentLevel <= 0) //dont let the score drop into negatives.
+                 {
+                        item.currentLevel = 0;
+                 }
             }
 
             if(item.currentLevel == item.maxLevel) //display on the buttonText that the object is at max level
@@ -57,8 +62,6 @@ public class LevelUpManager : MonoBehaviour
 
     public void CheckForMaxed()
     {
-        //itemsMaxed = 0; //system starts at 0 when checking
-
         foreach(ItemPhase item in items)
         {
             if(item.currentLevel == item.maxLevel) //for every item, check if their current level is their max level
