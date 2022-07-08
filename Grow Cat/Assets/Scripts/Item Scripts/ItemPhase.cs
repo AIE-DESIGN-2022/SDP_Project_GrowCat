@@ -29,7 +29,7 @@ public class ItemPhase : MonoBehaviour
     }
 
     public void LevelUp() //level up the item
-    {
+    { 
         //check the item hasnt reached max level yet
         if(currentLevel < maxLevel)
         {

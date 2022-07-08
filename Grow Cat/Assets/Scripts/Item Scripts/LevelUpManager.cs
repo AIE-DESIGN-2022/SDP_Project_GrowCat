@@ -18,18 +18,18 @@ public class LevelUpManager : MonoBehaviour
 
     public void LevelUpAll()
     {
-       if(items != null)
+        if (items != null)
         {
             //run this for every item possible
             foreach (ItemPhase item in items)
             {
-                //if the object has been set to active
-                if (item.gameObject.activeInHierarchy)
-                {
+                 if (item.gameObject.activeInHierarchy)
+                 {
                     item.LevelUp();
-                }
+                 } 
             }
-        } 
+        }
+
     }
 
     public void ShowResult()

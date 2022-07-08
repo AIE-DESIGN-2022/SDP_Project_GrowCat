@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 262469491468347829}
   m_Layer: 0
   m_Name: Ball_1
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,3 +153,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadState: {fileID: 8270532056638814077, guid: 6745973540f64854e969e85ef5ff61eb, type: 3}
+  BallHitFish: 0

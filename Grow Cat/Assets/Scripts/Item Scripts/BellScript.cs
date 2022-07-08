@@ -15,6 +15,7 @@ public class BellScript : MonoBehaviour
         catTower = GameObject.Find("Box_Level5(Clone)"); //if the cat tower is level 5, assign
         bellSpawn = GameObject.Find("Object_Bell"); //assign bell spawn
 
+        
     }
 
     // Update is called once per frame
@@ -23,6 +24,10 @@ public class BellScript : MonoBehaviour
         if (catTower == null) //if the cat tower isnt level 5, but IS level 6.
         {
             catTower = GameObject.Find("Box_Level6(Clone)");
+            if(catTower == null)
+            {
+                DeadBell();
+            }
         }
 
         if (catTower != null) //if the cat tower is levelled enough, the bell will stay at the spawn point
@@ -31,15 +36,11 @@ public class BellScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void DeadBell()
     {
-        if (collision.gameObject.tag == "Ground") //if the bell touches the ground 
-        {
-            GameObject dead = Instantiate(deadState); //create a bell w/out any scripts
-            dead.transform.position = transform.position; //the bell is put where the previous bell was
-            bellSpawn.SetActive(false); //kill the spawner
-            Destroy(this.gameObject); //destroy the old bell
-
-        }
+        GameObject dead = Instantiate(deadState); //create a bell w/out any scripts
+        dead.transform.position = transform.position; //the bell is put where the previous bell was
+        bellSpawn.SetActive(false); //kill the spawner
+        Destroy(this.gameObject); //destroy the old bell
     }
 }
