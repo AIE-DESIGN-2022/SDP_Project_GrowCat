@@ -3199,6 +3199,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 481077409486391484, guid: 46042061c645c3f4d85cb276e6f56997, type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 1787388169}
+    - target: {fileID: 481077409486391484, guid: 46042061c645c3f4d85cb276e6f56997, type: 3}
       propertyPath: currentLevel
       value: 0
       objectReference: {fileID: 0}
@@ -3292,6 +3296,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 578498103473848993, guid: d49cb7222ab41774987217c41a7c16c3, type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 1825096981}
+    - target: {fileID: 578498103473848993, guid: d49cb7222ab41774987217c41a7c16c3, type: 3}
       propertyPath: currentLevel
       value: 0
       objectReference: {fileID: 0}
@@ -3336,6 +3344,10 @@ PrefabInstance:
       propertyPath: maxLevel
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1345867940564906723, guid: be218a8347c7df945b2332d69f8ea0f4, type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 804653277}
     - target: {fileID: 1345867940564906723, guid: be218a8347c7df945b2332d69f8ea0f4, type: 3}
       propertyPath: currentLevel
       value: 0
@@ -3466,6 +3478,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3854336211231933262, guid: dd8662e6c567dcc4797b110c665cd3a6, type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 1655840183}
+    - target: {fileID: 3854336211231933262, guid: dd8662e6c567dcc4797b110c665cd3a6, type: 3}
       propertyPath: currentLevel
       value: 0
       objectReference: {fileID: 0}
@@ -3562,6 +3578,10 @@ PrefabInstance:
       propertyPath: maxLevel
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8635344515234856203, guid: 81be0dd03dadcfc4d90d2fc13e0ba5cf, type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 11301924}
     - target: {fileID: 8635344515234856203, guid: 81be0dd03dadcfc4d90d2fc13e0ba5cf, type: 3}
       propertyPath: currentLevel
       value: 0
@@ -3675,6 +3695,10 @@ PrefabInstance:
       propertyPath: maxLevel
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 9002142697570733989, guid: b15fc5defe94cea4e87ff12576b3a0da, type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 162691093}
     - target: {fileID: 9002142697570733989, guid: b15fc5defe94cea4e87ff12576b3a0da, type: 3}
       propertyPath: currentLevel
       value: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ItemPhase : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ItemPhase : MonoBehaviour
     public int maxLevel;
     public int currentLevel = 1;
     public LevelUpManager levelUpManager;
+    public Text buttonText;
 
     //modelling
     ModelSwap modelSwap; //our script for swapping models

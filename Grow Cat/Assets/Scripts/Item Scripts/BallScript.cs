@@ -8,6 +8,7 @@ public class BallScript : MonoBehaviour
     ItemPhase itemPhase;
     Rigidbody rb;
     public GameObject deadState;
+    public bool BallHitFish;
 
     // Start is called before the first frame update
     void Start()
@@ -20,19 +21,25 @@ public class BallScript : MonoBehaviour
         {
             rb.AddForce(0, 400, -50 * itemPhase.currentLevel);
         }
-        
+
+        //tell system to find the ball
+        LevelUpManager levelUpManager = FindObjectOfType<LevelUpManager>();
+        levelUpManager.FindBall();
     }
 
     // Update is called once per frame
     void Update()
     {
         itemObject.transform.position = transform.position; //keep the spawning gameobject on the ball
+
+        if (itemPhase.currentLevel == itemPhase.maxLevel && !BallHitFish) //tell the system the ball is going to hit the fish
+        {
+            BallHitFish = true;
+        }
     }
-    
+
     private void OnCollisionEnter(Collision collision)
     {
-      
-
         if (collision.gameObject.tag == "Fish") //when the ball collides with fishtank and hasnt touched the ground yet
         {
             GameObject fishtank = GameObject.FindGameObjectWithTag("FishSpawn"); //find the fishtank spawner
@@ -40,6 +47,7 @@ public class BallScript : MonoBehaviour
             itemPhase.ShowPop(fishtank); //show a pop over the fishtank
             Destroy(this.gameObject); //destroy the ball
 
+            
             GameObject deadBall = GameObject.Find("Ball_4(Clone)");
             Destroy(deadBall);
         }       
